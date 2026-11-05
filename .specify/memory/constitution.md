@@ -133,4 +133,4 @@ or non-semantic wording changes. Compliance MUST be checked during planning
 and again in pull-request review. Any exception MUST be explicit, limited in
 scope, approved by the team, and recorded with its rationale.
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Confirm with the project team. | **Last Amended**: 2026-11-05
+**Version**: 1.0.0 | **Ratified**: 2026-11-05 | **Last Amended**: 2026-11-05
