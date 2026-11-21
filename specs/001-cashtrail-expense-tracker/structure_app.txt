@@ -1,0 +1,52 @@
+MVP Pages/Routes
+/ – Home page. Quick access to add a new expense.
+/register – Sign-up form to create a new account.
+/login – Login form for existing users.
+/expenses – List of all the user’s expenses.
+/expenses/[id] – Details of a single expense, with edit and delete options.
+/categories – List of categories, with the option to create new ones.
+/categories/[id] – Edit or delete a single category.
+/monthly – Monthly summary of expenses by category.
+
+Components 
+- Header
+- Footer
+- NavLinks
+- ExpenseCard
+- CategoryCard
+- ExpenseForm
+- CategoryForm
+
+
+Week 4 implementation highest priority
+- "/" home page
+- "/register"
+- "/login"
+- Header
+- Footer
+- NavLinks
+
+Design Theme & Branding
+
+Color palette: A dark, tech-inspired theme using blue, gray and near-black tones (Tailwind’s slate and blue scales):
+
+Background: 
+#0F172A (slate-900)
+Surfaces (cards, header): 
+#1E293B (slate-800)
+Borders: 
+#334155 (slate-700)
+Primary text: 
+#F1F5F9 (slate-100)
+Secondary text: 
+#94A3B8 (slate-400)
+Accent (buttons, active links): 
+#3B82F6 (blue-500)
+Danger (delete actions): 
+#EF4444 (red-500)
+
+Typography: Geist for all interface text and Geist Mono for money amounts, so numbers align and match the app’s digital look. Geist comes built into Next.js.
+
+Layout: A top header with the app name on the left and login/register or logout on the right, a left sidebar with the main navigation (Home, Expenses, Categories, Monthly) and a simple footer. The home page has a “New expense” button and a list of the most recent expenses.
+
+Spacing and UI conventions: Tailwind CSS’s default spacing scale for consistent padding and gaps, rounded corners (rounded-lg) on cards and buttons, and shadcn/ui as an optional component library for forms, buttons and tables.
