@@ -1,4 +1,6 @@
-import Link from 'next/link';
+import Link from 'next/link'; 
+import { Suspense } from 'react';
+import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 
 export default function Header() {
     return (
@@ -9,18 +11,23 @@ export default function Header() {
                 </Link>
                 {/* Auth buttons: will be replaced by Clerk components */}
                 <div className="flex items-center gap-3">
-                    <Link
-                        href="/login"
-                        className="rounded-lg border border-slate-700 px-5 py-2.5 text-base text-slate-100 transition-colors hover:bg-slate-700"
-                    >
-                        Log in
-                    </Link>
-                    <Link
-                        href="/register"
-                        className="rounded-lg bg-blue-500 px-5 py-2.5 text-base font-semibold text-slate-900 transition-colors hover:bg-blue-400"
-                    >
-                        Register
-                    </Link>
+                    <Suspense>
+                        <Show when="signed-out">
+                            <SignInButton>
+                                <button className="rounded-lg border border-slate-700 px-5 py-2.5 text-base text-slate-100 transition-colors hover:bg-slate-700">
+                                    Log in
+                                </button>
+                            </SignInButton>
+                            <SignUpButton>
+                                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-base font-semibold text-slate-900 transition-colors hover:bg-blue-400">
+                                    Register
+                                </button>
+                            </SignUpButton>
+                        </Show>
+                        <Show when="signed-in">
+                            <UserButton />
+                        </Show>
+                    </Suspense>
                 </div>
             </div>
         </header>
